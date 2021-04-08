@@ -11,7 +11,11 @@ def dibujarTablero(tablero):
 
 def completarTableroEnOrden(secuencia, tablero):
     for i, columna in enumerate(secuencia):
-        soltarFichaEnColumna((i % 2) + 1, columna, tablero)
+        if validarColumna(columna):
+            soltarFichaEnColumna((i % 2) + 1, columna, tablero)
+        else: 
+            print("Error: secuencia no valida.")
+            exit(1)
     return tablero
 
 def soltarFichaEnColumna(ficha, columna, tablero):
@@ -19,6 +23,9 @@ def soltarFichaEnColumna(ficha, columna, tablero):
         if tablero[fila - 1][columna - 1] == 0:
             tablero[fila - 1][columna - 1] = ficha
             break
+
+def validarColumna(columna):
+    return columna >= 1 and columna <= 7
 
 def tableroVacio():
     return [[0, 0, 0, 0, 0, 0, 0],
@@ -28,6 +35,6 @@ def tableroVacio():
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0]]
 
-secuencia = [1, 2, 3, 4, 5, 3, 6]
+secuencia = [1, 2, 3, 4, 5, 3, 6, 7, 8]
 
 dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
