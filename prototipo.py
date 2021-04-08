@@ -28,6 +28,6 @@ def tableroVacio():
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0]]
 
-secuencia = [1, 2, 3, 4, 5, 3, 6, 3, 4, 5, 3, 6]
+secuencia = [1, 2, 3, 4, 5, 3, 6]
 
 dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
