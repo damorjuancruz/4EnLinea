@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Tablero: 6 filas x 7 columnas
 
 def dibujarTablero(tablero):
@@ -33,7 +35,6 @@ def validarSecuencia(secuencia):
         if columna < 1 or columna > 7:
             return False
     return True
-            
 
 secuencia = [1, 2, 3, 4, 5, 3, 6, 7, 8]
 
