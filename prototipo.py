@@ -36,6 +36,19 @@ def contenido_columna(nro_columna, tablero):
         columna.append(fila[nro_columna - 1])
     return columna
 
+def contenido_fila(nro_fila, tablero):
+    return tablero[nro_fila - 1]
+
+def columnas(tablero):
+    columnas = [[], [], [], [], [], [], []]
+    for fila in tablero:
+        for i, celda in enumerate(fila):
+            columnas[i].append(celda)
+    return columnas
+
+def filas(tablero):
+    return tablero
+
 def validarSecuencia(secuencia):
     for columna in secuencia:
         if columna < 1 or columna > 7:
