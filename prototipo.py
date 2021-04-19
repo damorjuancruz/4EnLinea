@@ -30,6 +30,12 @@ def tableroVacio():
             [0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0]]
 
+def contenido_columna(nro_columna, tablero):
+    columna = []
+    for fila in tablero:
+        columna.append(fila[nro_columna - 1])
+    return columna
+
 def validarSecuencia(secuencia):
     for columna in secuencia:
         if columna < 1 or columna > 7:
