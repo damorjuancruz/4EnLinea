@@ -64,4 +64,7 @@ if validarSecuencia(secuencia):
 else:
     print("Error: las columnas deben estar entre el 1 y el 7.")
 
-print(contenido_columna(1, tablero))
+print(contenido_columna(3, tablero))
+print(contenido_fila(5, tablero))
+print(columnas(tablero))
+print(filas(tablero))
