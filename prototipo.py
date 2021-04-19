@@ -42,9 +42,13 @@ def validarSecuencia(secuencia):
             return False
     return True
 
-secuencia = [1, 2, 3, 4, 5, 3, 6, 7, 8]
+secuencia = [1, 2, 3, 4, 5, 3, 6, 7]
+tablero = []
 
 if validarSecuencia(secuencia):
-    dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
+    tablero = completarTableroEnOrden(secuencia, tableroVacio())
+    dibujarTablero(tablero)
 else:
     print("Error: las columnas deben estar entre el 1 y el 7.")
+
+print(contenido_columna(1, tablero))
