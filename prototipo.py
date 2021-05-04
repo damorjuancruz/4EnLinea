@@ -22,6 +22,7 @@ def soltarFichaEnColumna(ficha, columna, tablero):
             tablero[fila - 1][columna - 1] = ficha
             break
 
+# Devuelve un tablero vacio
 def tableroVacio():
     return [[0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0],
