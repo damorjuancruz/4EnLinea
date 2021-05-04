@@ -3,13 +3,16 @@
 # Tablero: 6 filas x 7 columnas
 
 def dibujarTablero(tablero):
+    print('+---------------------+')
     for fila in tablero:
+        print('|', end='')
         for celda in fila:
             if celda:
-                print(celda, end=' ')
+                print(' {} '.format(celda), end='')
             else:
-                print(' ', end=' ')
-        print('')
+                print('   ', end='')
+        print('|')
+    print('+---------------------+')
 
 def completarTableroEnOrden(secuencia, tablero):
     for i, columna in enumerate(secuencia):
@@ -64,8 +67,3 @@ if validarSecuencia(secuencia):
     dibujarTablero(tablero)
 else:
     print("Error: las columnas deben estar entre el 1 y el 7.")
-
-print(contenido_columna(3, tablero))
-print(contenido_fila(5, tablero))
-print(columnas(tablero))
-print(filas(tablero))
